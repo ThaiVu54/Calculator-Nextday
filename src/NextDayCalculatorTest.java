@@ -37,4 +37,24 @@ class NextDayCalculatorTest {
         assertEquals(expected, result);
     }
 
+    @Test
+    @DisplayName("case 28/2/2018")
+    void testDay28Month2Year2018(){
+        int dayTest = 28;
+        int monthTest = 2;
+        int yearTest = 2018;
+        String result = NextDayCalculator.getNextDay(dayTest,monthTest,yearTest);
+        String expected = "1/3/2018";
+        assertEquals(expected,result);
+    }
+    @Test
+    @DisplayName("case 31/12/2018")
+    void testDay31Month12Year2018(){
+        int dayTest = 31;
+        int monthTest = 12;
+        int yearTest = 2018;
+        String result = NextDayCalculator.getNextDay(dayTest,monthTest,yearTest);
+        String expected = "1/1/2019";
+        assertEquals(expected,result);
+    }
 }
